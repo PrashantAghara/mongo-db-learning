@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Prashant",
+    "age": 22,
+    "history": [{ "disease": "cold", "treatment": 1 }]
+  },
+  {
+    "name": "Max",
+    "age": 30,
+    "history": [{ "disease": "cold", "treatment": 3 }]
+  },
+  {
+    "name": "Peter",
+    "age": 21,
+    "history": [{ "disease": "cold", "treatment": 1 }]
+  },
+  {
+    "Insert": "db.patients.insertMany([ { \"name\": \"Prashant\", \"age\": 22, \"history\": [{ \"disease\": \"cold\", \"treatment\": 1 }] }, { \"name\": \"Max\", \"age\": 30, \"history\": [{ \"disease\": \"cold\", \"treatment\": 3 }] }, { \"name\": \"Peter\", \"age\": 21, \"history\": [{ \"disease\": \"cold\", \"treatment\": 1 }] }])",
+    "Update": "db.patients.replaceOne({name: \"Peter\"}, {name: \"Bob\", age: 24, history: [{\"disease\": \"cold\", \"treatment\": 1}]})",
+    "Select": "db.patients.find({age: {$gt: 23}})",
+    "Delete": "db.patients.deleteMany({\"history.disease\": \"cold\"})"
+  }
+]
